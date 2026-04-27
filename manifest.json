@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "블로그 썸네일 메이커",
+  "description": "800×450 블로그 썸네일을 빠르게 만들고 PNG로 다운로드하세요",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "썸네일 메이커"
+  }
+}

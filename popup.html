@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>썸네일 메이커</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app">
+
+    <div class="app-header">
+      <span class="app-title">썸네일 메이커</span>
+      <span class="app-size">800 × 450</span>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="canvas" width="800" height="450"></canvas>
+    </div>
+
+    <div class="panel">
+
+      <div class="group">
+        <div class="group-label">프리셋 테마</div>
+        <div class="themes-row">
+          <button class="theme-swatch active" data-theme="royal"  title="로얄 다크"></button>
+          <button class="theme-swatch" data-theme="ocean"         title="오션"></button>
+          <button class="theme-swatch" data-theme="purple"        title="퍼플"></button>
+          <button class="theme-swatch" data-theme="fire"          title="파이어"></button>
+          <button class="theme-swatch" data-theme="forest"        title="포레스트"></button>
+          <button class="theme-swatch" data-theme="sunset"        title="선셋"></button>
+          <button class="theme-swatch" data-theme="mint"          title="민트"></button>
+          <button class="theme-swatch" data-theme="gold"          title="골드"></button>
+          <button class="theme-swatch" data-theme="rose"          title="로즈"></button>
+          <button class="theme-swatch" data-theme="dark"          title="딥 다크"></button>
+        </div>
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-col">
+          <div class="group">
+            <div class="group-label">텍스트</div>
+            <div class="field">
+              <label>제목</label>
+              <textarea id="inp-title" rows="2" placeholder="제목을 입력하세요"></textarea>
+            </div>
+            <div class="field">
+              <label>부제목</label>
+              <input id="inp-subtitle" type="text" placeholder="부제목 (선택)">
+            </div>
+            <div class="field">
+              <label>태그 / 배지</label>
+              <input id="inp-tag" type="text" placeholder="#태그 (선택)">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-col">
+          <div class="group">
+            <div class="group-label">스타일</div>
+            <div class="field">
+              <label>폰트</label>
+              <select id="inp-font">
+                <option value="Apple SD Gothic Neo, Malgun Gothic, sans-serif">한글 기본 (SD Gothic)</option>
+                <option value="Segoe UI, Arial, sans-serif">Segoe UI</option>
+                <option value="Arial, Helvetica, sans-serif">Arial</option>
+                <option value="Georgia, Times New Roman, serif">Georgia (Serif)</option>
+                <option value="Courier New, Courier, monospace">Courier New (Mono)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>제목 크기: <strong id="lbl-size">52</strong>px</label>
+              <input id="inp-size" type="range" min="28" max="80" value="52">
+            </div>
+            <div class="field">
+              <label>텍스트 정렬</label>
+              <div class="btn-group">
+                <button class="tog-btn" data-align="left">왼쪽</button>
+                <button class="tog-btn active" data-align="center">가운데</button>
+                <button class="tog-btn" data-align="right">오른쪽</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="group-label">배경</div>
+            <div class="field field-colors">
+              <div>
+                <label>색상 1</label>
+                <input id="inp-c1" type="color" value="#141E30">
+              </div>
+              <div>
+                <label>색상 2</label>
+                <input id="inp-c2" type="color" value="#243B55">
+              </div>
+              <div>
+                <label>글자 색</label>
+                <input id="inp-tc" type="color" value="#ffffff">
+              </div>
+            </div>
+            <div class="field">
+              <label>그라디언트 방향</label>
+              <select id="inp-grad">
+                <option value="diagonal">대각선</option>
+                <option value="horizontal">가로</option>
+                <option value="vertical">세로</option>
+                <option value="radial">원형 (중앙)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>장식 패턴</label>
+              <select id="inp-deco">
+                <option value="circles">원형</option>
+                <option value="dots">점 패턴</option>
+                <option value="lines">사선</option>
+                <option value="geometric">기하학</option>
+                <option value="none">없음</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="btn-export" class="export-btn">PNG 다운로드 (800 × 450)</button>
+    </div>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
