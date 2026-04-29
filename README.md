@@ -18,7 +18,7 @@
 
 ## 설치 방법
 
-Chrome Web Store 배포 심사 중...
+[크롬 익스텐션 설치](https://chromewebstore.google.com/detail/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8D%B8%EB%84%A4%EC%9D%BC-%EB%A9%94%EC%9D%B4%EC%BB%A4/chgdojhboceepfcaibkdolgfkgdhmlcg?hl=ko)
 
 ---
 
